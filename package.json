@@ -1,0 +1,29 @@
+{
+  "name": "postgresql",
+  "version": "1.0.0",
+  "description": "postgresql",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PiotrBerebecki/movie-ratings-postgresql-database.git"
+  },
+  "keywords": [
+    "database"
+  ],
+  "author": "PiotrBerebecki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PiotrBerebecki/movie-ratings-postgresql-database.git"
+  },
+  "homepage": "https://github.com/PiotrBerebecki/movie-ratings-postgresql-database",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "env2": "^2.1.1"
+  }
+}
