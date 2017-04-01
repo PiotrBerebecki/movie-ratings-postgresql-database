@@ -1,7 +1,7 @@
 // **********************************************
 // APP
 // **********************************************
-fetch('GET', `get-data`, renderData);
+fetch('GET', `get-data/movies`, renderData);
 
 
 
@@ -14,6 +14,7 @@ function renderData(err, results) {
 
   if (err) {
     resultsDOM.innerHTML = '<li>Sorry, database error</li>';
+    return;
   }
 
   resultsDOM.innerHTML = results.map(item => {

@@ -1,6 +1,8 @@
 const path = require('path');
 const fs = require('fs');
 
+const getDataFromDatabase = require('./database');
+
 
 const handlers = {};
 
@@ -44,7 +46,16 @@ handlers.serveAssets = (req, res) => {
 
 
 handlers.serveData = (req, res) => {
-  console.log('======handler', req.url);
+  getDataFromDatabase(req.url, (dbError, dbResponse) => {
+    let dataToSend;
+    if (dbError) {
+      dataToSend = [{error: 'no data'}];
+    } else {
+      dataToSend = dbResponse.rows;
+    }
+    res.writeHead(200, { 'content-type': 'application/json' });
+    res.end(JSON.stringify(dataToSend));
+  });
 };
 
 
