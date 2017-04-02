@@ -1,5 +1,5 @@
 {
-  "name": "postgresql",
+  "name": "postgresql movie database",
   "version": "1.0.0",
   "description": "postgresql",
   "main": "src/server.js",
